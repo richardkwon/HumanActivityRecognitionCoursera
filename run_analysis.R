@@ -78,4 +78,5 @@ run_analysis <- function () {
     
     ## Write the new tidy data set to the TXT file
     write.table(new_tidy_data, file="./summarized_tidy_data.txt", row.names = FALSE)
+    
 }
