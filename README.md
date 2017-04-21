@@ -1,6 +1,6 @@
 # HumanActivityRecognitionCoursera
 
-Here is what the assignment specified
+###Here is what the assignment specified
 
 You should create one R script called run_analysis.R that does the following.
 
