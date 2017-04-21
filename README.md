@@ -71,4 +71,4 @@ tidy_data <- cbind(merged_subjects, merged_label, merged_set)
 new_tidy_data <- summarize_each(group_by(tidy_data, personid, activity), funs(mean))
 ```
 
-!(https://s-media-cache-ak0.pinimg.com/736x/02/e4/dc/02e4dcd5541e5be82dcf13a1227c370b.jpg)
+![That's All Folks!](https://s-media-cache-ak0.pinimg.com/736x/02/e4/dc/02e4dcd5541e5be82dcf13a1227c370b.jpg)
