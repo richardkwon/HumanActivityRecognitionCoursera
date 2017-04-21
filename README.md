@@ -66,7 +66,7 @@ names(merged_subjects) <- "personid"
 tidy_data <- cbind(merged_subjects, merged_label, merged_set)    
 ```
 
-#### LASTLY, we summarize into new tidy data set grouped by person and activity and averaging each data readings
+#### LASTLY, I summarized it into new tidy data set grouped by person and activity and averaging each data readings
 ```
 new_tidy_data <- summarize_each(group_by(tidy_data, personid, activity), funs(mean))
 ```
