@@ -45,3 +45,24 @@ column_names <- read.csv("UCI HAR Dataset\\features.txt", header=FALSE, sep="")
 column_names <- column_names[,2]
 names(merged_set) <- as.character(column_names)
 ```
+
+#### THIRD, search for the columns with "mean" and "std" substrings.  Using that column list, filter down the "data" table to only those columns.
+```
+char_column_names<-as.character(column_names)
+bool_mean_and_std <- grepl("std|mean", char_column_names)
+merged_set <- merged_set[, bool_mean_and_std]
+```
+
+#### FOURTH, substitute activity values to more descriptive activity labels.  The descriptive activity labels come from a file activity_labels.txt
+#### By applying the more descriptive activity labels to the merged "data", we now have a BIG, TIDY data set
+```
+activity_labels <- read.csv("UCI HAR Dataset\\activity_labels.txt", sep = "", header = FALSE)
+temp <- join(merged_label, activity_labels)
+merged_label <- temp[2]    
+
+names(merged_label) <- "activity"
+names(merged_subjects) <- "personid"
+
+tidy_data <- cbind(merged_subjects, merged_label, merged_set)    
+```
+
