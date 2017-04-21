@@ -14,7 +14,7 @@
 
 ### My code simply follow the each steps at a time.
 
-##### FIRST, merges the training and the test file sets to create one data set.
+#### FIRST, merges the training and the test file sets to create one data set.
 Both test and train subfolders had 3 types of files to read - raw data files, label files, and test subject/person information files
 
 This portion reads the raw data files from both subfolders and merges them.
@@ -39,7 +39,7 @@ What we have now are 3 merged (test + train) data sets - data, label, person.
 
 
 
-##### SECOND, read the column names from the features.txt file and applied them to the merged "data" set so that we have more descriptive column headings
+#### SECOND, read the column names from the features.txt file and applied them to the merged "data" set so that we have more descriptive column headings
 ```
 column_names <- read.csv("UCI HAR Dataset\\features.txt", header=FALSE, sep="")
 column_names <- column_names[,2]
@@ -66,3 +66,9 @@ names(merged_subjects) <- "personid"
 tidy_data <- cbind(merged_subjects, merged_label, merged_set)    
 ```
 
+#### LASTLY, we summarize into new tidy data set grouped by person and activity and averaging each data readings
+```
+new_tidy_data <- summarize_each(group_by(tidy_data, personid, activity), funs(mean))
+```
+
+https://s-media-cache-ak0.pinimg.com/736x/02/e4/dc/02e4dcd5541e5be82dcf13a1227c370b.jpg
