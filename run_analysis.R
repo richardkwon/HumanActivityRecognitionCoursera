@@ -1,7 +1,7 @@
 run_analysis <- function () {
     #################################################################################
     ##
-    ## Author: Richard Kwon
+    ## Author: Omyung (Richard) Kwon
     ## Date: April 21, 2017
     ## Human Activity Recognition - Coursera (Getting and Cleaning Data course)
     ##
@@ -11,7 +11,7 @@ run_analysis <- function () {
     library(plyr)
     
     #################################################################################
-    ## 1, merge the training and the test data sets
+    ## 1, merge the training and test data sets
     #################################################################################
     
     ## data set
@@ -76,7 +76,7 @@ run_analysis <- function () {
     ## with the average of each variable for each activity and each subject (person)
     #################################################################################
     new_tidy_data <- summarize_each(group_by(tidy_data, personid, activity), funs(mean))
-    new_tidy_data
     
+    ## Write the new tidy data set to the CSV file
     write.csv(new_tidy_data, file="./newtidydata.csv", row.names=FALSE)
 }
