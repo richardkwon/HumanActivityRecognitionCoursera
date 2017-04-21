@@ -10,7 +10,8 @@
 > 4. Appropriately labels the data set with descriptive variable names.
 >5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-#### Merges the training and the test sets to create one data set.
+### My code simply follow the each step at a time.
+#### First, merges the training and the test sets to create one data set.
 both test and train subfolders had 3 types of files to read - raw data set, label file, and test subject/person information
 
 this read the raw data sets from both subfolders.
