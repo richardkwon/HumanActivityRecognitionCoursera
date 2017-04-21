@@ -69,6 +69,7 @@ run_analysis <- function () {
     ## We have a big, consolidated tidy data!
     tidy_data <- cbind(merged_subjects, merged_label, merged_set)
     ##print(tidy_data)
+    write.csv(tidy_data, file="./merged_tidy_data.csv", row.names=FALSE)
     
     
     #################################################################################
@@ -78,5 +79,5 @@ run_analysis <- function () {
     new_tidy_data <- summarize_each(group_by(tidy_data, personid, activity), funs(mean))
     
     ## Write the new tidy data set to the CSV file
-    write.csv(new_tidy_data, file="./newtidydata.csv", row.names=FALSE)
+    write.csv(new_tidy_data, file="./summarized_tidy_data.csv", row.names=FALSE)
 }
