@@ -14,6 +14,6 @@ You should create one R script called run_analysis.R that does the following.
 both test and train subfolders had 3 types of files to read - raw data set, label file, and test subject/person information
 
 this read the raw data sets from both subfolders.
-    training_set <- read.csv("UCI HAR Dataset\\train\\X_train.txt", header=FALSE, sep="")
-    test_set <- read.csv("UCI HAR Dataset\\test\\X_test.txt", header=FALSE, sep="")
+```training_set <- read.csv("UCI HAR Dataset\\train\\X_train.txt", header=FALSE, sep="")
+```test_set <- read.csv("UCI HAR Dataset\\test\\X_test.txt", header=FALSE, sep="")
 
