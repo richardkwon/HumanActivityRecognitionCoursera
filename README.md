@@ -12,12 +12,23 @@
 
 ### My code simply follow the each steps at a time.
 #### FIRST, merges the training and the test sets to create one data set.
-both test and train subfolders had 3 types of files to read - raw data set, label file, and test subject/person information
+Both test and train subfolders had 3 types of files to read - raw data set, label file, and test subject/person information
 
-this portion reads the raw data sets from both subfolders.
+This portion reads the raw data sets from both subfolders and merges them.
 ```
 training_set <- read.csv("UCI HAR Dataset\\train\\X_train.txt", header=FALSE, sep="")
 test_set <- read.csv("UCI HAR Dataset\\test\\X_test.txt", header=FALSE, sep="")
+merged_set <- rbind(training_set, test_set)
 ```
 
+Same process is done for labels and persons data files.
+```
+training_label <- read.csv("UCI HAR Dataset\\train\\y_train.txt", sep="", header=FALSE)
+test_label <- read.csv("UCI HAR Dataset\\test\\y_test.txt", sep="", header=FALSE)
+merged_label <- rbind(training_label, test_label)
+    
+test_subjects <- read.csv("UCI HAR Dataset\\test\\subject_test.txt", sep="", header=FALSE)
+training_subjects <- read.csv("UCI HAR Dataset\\train\\subject_train.txt", sep="", header=FALSE)
+merged_subjects <- rbind(training_subjects, test_subjects)
+```
 
