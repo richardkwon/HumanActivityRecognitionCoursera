@@ -1,6 +1,8 @@
 # Human Activity Recognition - Getting and Cleaning Data/Coursera
 
 ## Introduction
+This assignment is a data cleaning exercise.  We are given an original data set and write a R script to massage the data to generate a new tidy data set.
+  
 The data related to this project is the data collected from the accelerometers from the Samsung Galaxy S smartphone. A high level introduction and description is available at the site where the data was obtained  
   
 [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
@@ -69,5 +71,13 @@ tBodyGyroJerkMean
    
   
 ## Data Transformation
+  
+A new R script called **run_analysis.R** is created to generate a new tidy data set using the original data.  The R script does the following:
+  
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
 
