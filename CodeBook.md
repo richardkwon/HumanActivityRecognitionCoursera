@@ -79,5 +79,20 @@ A new R script called **run_analysis.R** is created to generate a new tidy data 
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+  
+The original data set was split into training and test sets (70% and 30%) where each partition is also split into three files that contain 1) measurements from the accelerometer and gyroscope 2) activity label and 3) identifier of the person/subjects.  Following files were used:
+  
+* measurements from the accelerometer and gyroscope
+  * train\X_train.txt
+  * test\X_test.txt
+* activity label
+  * train\y_train.txt
+  * test\y_test.txt
+
+* identifier of the person/subjects
+  * train\subject_train.txt
+  * test\subject_test.txt
+  
+
 
 
