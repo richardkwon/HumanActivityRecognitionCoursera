@@ -184,4 +184,4 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of 
  $ fBodyBodyGyroJerkMag-meanFreq(): num  0.176 0.185 0.334 0.191 0.19 ...  
   
   
-  
+For more descriptive details of the coding steps, please refer to the README.md
