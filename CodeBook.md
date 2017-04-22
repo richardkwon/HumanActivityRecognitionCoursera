@@ -97,7 +97,7 @@ In addition, following files were used to substituate more descriptive column na
   * features.txt - descriptive column names
   * activity_labels.txt - descriptive human activity names
   
-From the full data set, only the columns that have the calculated average(mean) and standard deviation(std) values were filtered out.
+From the full data set, only the columns that have the calculated average(mean) and standard deviation(std) values were filtered out.  Then each column's average value was calculated grouped by each test subject and each activity type.  The resulting end data set as follows:
   
 > str(new_tidy_data)  
 Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of  81 variables:  
