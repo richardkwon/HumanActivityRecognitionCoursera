@@ -97,7 +97,7 @@ In addition, following files were used to substituate more descriptive column na
   * features.txt - descriptive column names
   * activity_labels.txt - descriptive human activity names
   
-From the full data set, only the columns that have the calculated average(mean) and standard deviation(std) values were filtered out.  Then each column's average value was calculated grouped by each test subject and each activity type.  The resulting end data set as follows:
+From the full data set, only the columns that have the calculated average(mean) and standard deviation(std) values were filtered out.  Then each column's average value was calculated grouped by each test subject and each activity type.  The resulting data set as follows:
   
 > str(new_tidy_data)  
 Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of  81 variables:  
@@ -183,5 +183,5 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of 
  $ fBodyBodyGyroJerkMag-std()     : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...  
  $ fBodyBodyGyroJerkMag-meanFreq(): num  0.176 0.185 0.334 0.191 0.19 ...  
   
-
-
+  
+  
